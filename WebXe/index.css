@@ -1,0 +1,19 @@
+.wrap{
+    position: relative;
+}
+.slide{
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+.slide1{background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.8)),url(./1.webp);}
+.slide2{background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.8)),url(./2.webp);}
+.slide3{background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.8)),url(./3.webp);}
+.slide4{background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.8)),url(./4.webp);}
+.slide6{background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.8)),url(./6.webp);}
+.slide7{background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.8)),url(./7.webp);}
+.slide-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

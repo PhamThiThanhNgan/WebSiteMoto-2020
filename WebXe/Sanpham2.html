@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm 2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./start.css">
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    
+    <link rel="stylesheet" href="./thu vien/bootstrap.min.css">
+    <script src="./thu vien/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="./thu vien/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#txtten").blur(function(){
+                var ten=$(this).val(); 
+                var regten=/^([A-Z]{1}[a-z]*\s)+([A-Z]{1}[a-z]*)$/
+                if(regten.test(ten)){
+                    $("#erter").text("");
+                }else{
+                    $("#erter").text("Tên đăng nhập sai vui lòng nhập lại!!!");
+                }
+            })
+            $("#txtpass").blur(function(){
+                var pass=$(this).val();
+                var regpass=/^(?=.*[A-Za-z0-9]).{6,}$/
+                if(regpass.test(pass)){
+                    $("#erter1").text("");
+                }else{
+                    $("#erter1").text("Password không đúng cú pháp!!!");
+                }
+            })
+            $('#txtpass1').blur(function(){
+            /*    if($("#erter2").val() != $("#erter1").val() ){
+
+                    $("#erter2").text("Password không trùng khớp!");
+                }
+                else{
+                $("#erter2").text("");
+                 }
+            })*/
+               if(document.getElementById('txtpass1').value != document.getElementById('txtpass').value){
+               $("#erter2").text("Password không trùng khớp!!")
+           }else{
+                $("#erter2").text("");
+           }
+            })
+            $("#txthoten").blur(function(){
+                var hoten=$(this).val(); 
+                var reghoten=/^([A-Z]{1}[a-z]*\s)+([A-Z]{1}[a-z]*)$/
+                if(reghoten.test(hoten)){
+                    $("#erter3").text("");
+                }else{
+                    $("#erter3").text("Họ và tên sai vui lòng nhập lại!!!");
+                }
+            })
+            $("#txtdate").blur(function(){
+                var ns=new Date($(this).val());
+                var today = new Date();
+                today=today.getFullYear();
+                if((today-ns.getFullYear())>17){
+                    $("#erter7").text("");
+                }else{
+                    $("#erter7").text("Tuổi >17t tuổi");
+                }
+            })
+            $("#txtdiachi").blur(function(){
+                var diachi=$(this).val();
+                var regdiachi=/^([A-Za-z0-9/]*\s)+([A-Za-z0-9]).*$/
+                if(regdiachi.test(diachi)){
+                    $("#erter4").text("")
+                }else{
+                    $("#erter4").text("Thông tin địa chỉ sai cú pháp!!!");
+                }
+            })
+            $("#txtsdt").blur(function(){
+                var sdt=$(this).val();
+                var regsdt=/^[0-9]{9,10}$/
+                if(regsdt.test(sdt)){
+                    $("#erter5").text("")
+                }else{
+                    $("#erter5").text("Số điện thoại không quá 10 số hoặc nhỏ hơn 9!!!");
+                }
+            })
+            $("#txtemail").blur(function(){
+                var email=$(this).val();
+                var regemail=/^(@)[A-Za-z]*(.com)$/
+                if(regemail.test(email)){
+                    $("#erter6").text("")
+                    alert("Đăng ký thành công");
+                }else{
+                    $("#erter6").text("email sai!!");
+                    alert("Đăng ký không thành công");
+                }
+            })
+            
+        })
+    </script>
+    <script>
+         $(document).ready(function(){
+            $("#txttendangnhap").blur(function(){
+                var ten=$(this).val(); 
+                var regten=/^([A-Z]{1}[a-z]*\s)+([A-Z]{1}[a-z]*)$/
+                if(regten.test(ten)){
+                    $("#ert").text("");
+                    
+                }else{
+                    $("#ert").text("Tên đăng nhập sai vui lòng nhập lại!!!");
+                }
+            })
+            $("#txtpassworddangnhap").blur(function(){
+                var pass=$(this).val();
+                var regpass=/^(?=.*[A-Za-z0-9]).{6,}$/
+                if(regpass.test(pass)){
+                    $("#ert1").text("");
+                    alert("Đăng nhập thành công");
+                }else{
+                    $("#ert1").text("Password không đúng cú pháp!!!");
+                    alert("Đăng nhập không thành công");
+                }
+            })
+        })
+    </script>
+    <style>
+    body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 175vh;
+}
+    </style>
+</head>
+<body style="background-image:url(./9.webp); background-position: center;background-repeat: no-repeat;
+        background-size: cover;position: relative; ">
+    <div style="height: 210px;">
+        <header class=" row col-12 text-center">
+        <div class="col-sm-4">
+            <h1 style="text-shadow:4px 2px 3px; font-size: 20px; padding-top: 1rem; font-style: italic;" class="text-left"><a href="http://127.0.0.1:5500/Trangchu.html" style="color: brown;">Jesseca&Tifanny motor <font color="black">®</font> </a></h1>
+            <p class="text-left" style="color: rgb(133, 138, 83); font-size: 15px; font-weight: 500; word-spacing: 12px;">Sự lựa chọn số 1 của bạn ✓</p>
+        </div>
+        <div class="col-sm-4">
+            <h1 style="color: rgb(127, 108, 128);text-shadow: 4px -2px 4px rgb(201, 196, 196); font-weight: 700;font-size: 50px;">SHOWROOM XE</h1>
+        </div>
+        <div class="col-sm-4">
+            <p class="text-right" style="font-size: 18px; font-weight: 800;  padding-top: 2rem;"><a href="#"  data-toggle="modal" data-target="#dangky" style="color: rgb(10, 170, 170);">Đăng ký</a> | <a href="#"style="color:rgb(10, 170, 170) ;" data-toggle="modal" data-target="#dangnhap">Đăng nhập</a></p>
+        </div>
+        <div class="modal" id="dangky" >
+            <div class="modal-dialog">
+                <div class="modal-content"  style="width:700px;background-image:linear-gradient(to bottom right,#66CCFF,white);">
+                    <div class="modal-header"  style="margin-left: 9rem;" >
+                        <h1  style="color: white;"><b><i class="fas fa-motorcycle" style="color: black;"></i>  Form Đăng ký  <i class="fas fa-motorcycle" style="color: black;"></i>  </b></h1>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body"  style="width:700px">
+                        <form action="">
+                            <div class="row form-group">
+                                <label for="" class="col-sm-3"  style="color: white;"><b> Tên đăng nhập:</b></label>
+                                <div class="col-sm-8"><input type="text" placeholder="Nhập vào tên đăng nhập" name="" id="txtten" class="form-control" ></div>
+                                <div class="col-sm-1" style="color: red; font-style: italic;" id="erter"><i class="fas fa-cloud"></i></div>
+                            </div>
+                            <div class="row form-group">
+                                <label for="" class="col-sm-3"  style="color: white;"><b> Mật khẩu:</b></label>
+                                <div class="col-sm-8"><input type="password" placeholder="Nhập vào mật khẩu" name="" id="txtpass" class="form-control"></div>
+                                <div class="col-sm-1" style="color: red; font-style: italic;" id="erter1"><i class="fas fa-cloud"></i></div>
+                            </div>
+                            <div class="row form-group">
+                                <label for="" class="col-sm-3"  style="color: white;"><b> Nhập lại mật khẩu:</b></label>
+                                <div class="col-sm-8"><input type="password" placeholder="Nhập vào xác nhận mật khẩu" name="" id="txtpass1" class="form-control"></div>
+                                <div class="col-sm-1" style="color: red; font-style: italic;" id="erter2"><i class="fas fa-cloud"></i></div>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                             <h3  style="color: white;"><b> THÔNG TIN CÁ NHÂN</b></h3>
+                            </div>
+                          <div class="row form-group">
+                              <label for="" class="col-sm-3"  style="color: white;" ><b> Họ và tên:</b></label>
+                              <div class="col-sm-8"><input type="text" placeholder="Nhâp vào họ tên (bắt buộc nhập)" name="" id="txthoten" class="form-control" ></div>
+                              <div class="col-sm-1" style="color: red; font-style: italic;" id="erter3"><i class="fas fa-cloud"></i></div>
+                          </div>
+                          <div class="row form-group">
+                              <label for="" class="col-sm-3"  style="color: white;"><b> Ngày sinh:</b></label>
+                              <div class="col-sm-8"><input type="date" name="" id="txtdate" class="form-control" style="width: 200px;"></div>
+                              <div  style="color: red; font-style: italic;" id="erter7"></div>
+                            </div>
+                         <div class=" row form-group">
+                             <label for="" class="col-sm-3"  style="color: white;"><b> Giới tính</b></label>
+                             <div class="col-sm-2">
+                                 <div class="form-check-inline"  style="color: white;">
+                                     <label for="" class="form-check-label"></label>
+                                     <input type="radio" name="rad" id="" class="form-check-input"  ><b> Nam</b>
+                                     <input type="radio" name="rad" id="" class="form-check-input" ><b>Nữ</b> 
+                                 </div>
+                             </div>
+                         </div>
+                          <div class="row form-group">
+                              <label for="" class="col-sm-3 "  style="color: white;"><b> Địa chỉ:</b></label>
+                              <div class="col-sm-8"><input type="text" placeholder="Nhập vào địa chỉ" name="" id="txtdiachi" class="form-control"></div>
+                              <div style="color: red; font-style: italic;" id="erter4"></div>
+                          </div>
+                          <div class="row form-group">
+                              <label for="" class="col-sm-3"  style="color: white;"><b> Điện thoại:</b></label>
+                              <div class="col-sm-8"><input type="number" placeholder="Nhập vào số điện thoại 9-10 số" name="" id="txtsdt" class="form-control"></div>
+                              <div  style="color: red; font-style: italic;" id="erter5"></div>
+                         </div>
+                          <div class="row form-group">
+                              <label for="" class="col-sm-3"  style="color: white;"><b> Email:</b></label>
+                              <div class="col-sm-8"><input type="text" placeholder="Nhập vào email cá nhân theo dạng tên @ten.com" name="" id="txtemail" class="form-control"></div>
+                              <div  style="color: red; font-style: italic;" id="erter6"></div>
+                             </div>  
+                          <div class="row form-group">
+                             <label for="" class="col-sm-0"></label>
+                             <div class="col-sm-12 text-md-center">
+                             <button type="button" class="btn btn-dark" name="" id="btndangki" class="form-control" value="Đăng ký" >Đăng ký</button>
+                             <button type="reset" class="btn btn-dark" name="" id="" class="form-control" value="Hủy" >Hủy</button>
+                             </div>
+                         </div>  
+                        </form>
+                    </div>
+                    <div class="modal-footer"  style="width:700px">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="row col-sm-12 text-center" style="color:white; text-shadow: -1px 1px; padding: 2rem;font-size: 23px; font-weight: 800;">
+            <p class="col-sm-3"><a href="./Trangchu.html" style="color: white">Trang chủ</a></p>
+            <p class="col-sm-3"><a href="./Gioithieu.html"style="color: white" >Giới Thiệu</a></p>
+            <p class="col-sm-3"><a href="./Sanpham.html" style="color: white">Sản Phẩm</a></p>
+            <p class="col-sm-3"><a href="./Lienhe.html" style="color: white">Liên Hệ</a></p>
+        </nav>
+        <div class="modal" id="dangnhap" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 style="color: brown; margin-left: 8rem;">Form Đăng Nhập</h2>
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="row form-group">
+                                <label for="" class="col-sm-4">Tên đăng nhập:</label>
+                                <div class="col-sm-7"><input type="text" placeholder="Nhập vào tên đăng nhập" name="" id="txttendangnhap" class="form-control"></div>
+                                <div  style="color: red; font-style: italic;" id="ert">(*)</div>
+                            </div>
+                            <div class="row form-group">
+                                <label for="" class="col-sm-4">Mật khẩu:</label>
+                                <div class="col-sm-7"><input type="password" placeholder="Nhập vào mật khẩu" name="" id="txtpassworddangnhap" class="form-control"></div>
+                                <div  style="color: red; font-style: italic;" id="ert1">(*)</div>
+                            </div>
+                            <div class="row form-group">
+                                <label for="" class="col-sm-1"></label>
+                                <div class="col-sm-11 text-md-center">
+                                <button type="button" class="btn btn-info" name="" id="btndangki" class="form-control" value="Đăng nhập">Đăng nhập</button>
+                                <button type="reset" class="btn btn-info" name="" id="" class="form-control" value="Hủy" >Hủy</button>
+                                </div>
+                            </div> 
+                            <div class="row form-group">
+                                <a href="https://facebook.com"><i class="fa fa-facebook-square" style="margin-left: 12rem;font-size: 36px; color: blue;" ></i></a>
+                                <a href="https://accounts.google.com/"><i class="fa fa-google" style="margin-left: 1rem; font-size: 36px; color: red;" ></i></a>
+                                <a href="https://twitter.com/login"><i class="fa fa-twitter-square" style="margin-left: 1rem; font-size: 36px; color: #00FFFF;" ></i></a>
+                            </div> 
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <section class="col-sm-12">
+            <h1 style="color: rgb(204, 218, 233);">SẢN PHẨM</h1>
+            <p style="font-size: 15px;"><a href="./Trangchu.html" style="color:rgb(81, 188, 207);">Trang chủ</a> <font style="color: white;">>> Sản Phẩm</font></p>
+            <p style="border: 1px solid rgb(62, 149, 165); line-height: 5rem; font-size: 33px; font-weight: 700; color: white; border-top-right-radius: 10rem; background: rgb(62, 149, 165); padding-left: 2rem;">SẢN PHẨM</p>
+          <aside class="row col-sm-12">
+            <div class="col-sm-4 text-center">
+                <a href="" data-toggle="modal" data-target="#md7"><img src="./VULCAN S.jpg" height="252px" alt=""></a>
+
+                <div class="modal fade" id="md7" >
+                    <div class="modal-dialog modal-lg" modal=lg>
+                        <div class="modal-content" >
+                            <div class="modal-header" style="text-align: center;" >
+                                <h2 style="color: rgb(112, 116, 177);">THÔNG TIN XE</h2>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="container">
+                                    <div class="row"> 
+                                        <div class="col-sm-6">
+                                            <img src="./VULCAN S.jpg" alt="" > 
+                                            <img src="./imgxe/xe7.jpg" alt="" width="360" height="270">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h3><b>VULCAN S</b></h3>
+                                            <form action="">
+                                                <div class="rowform-group" >
+                                                    <label for="col-sm-12"><b><h4>GIÁ: 239.000.000</b></h4> </label>
+                                                    
+                                                </div>
+                                              
+                                                <div class="rowform-group">
+                                                    <label for="col-sm-12"><b>THÔNG SỐ KỸ THUẬT</b> </label>
+                                                    
+                                                </div>
+                                                
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Loại động cơ :</b> 4 thì, xy-lanh đôi, DOHC, W/C</label>
+                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Dung tích :</b> 649 cm3</label>
+                                                    
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Đường kính x Hành trình Piston :</b> 83,0 x 60,0 mm</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Tỉ số nén :</b>  10,8:1</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>hệ thống bôi trơn :</b> Bôi trơn cưỡng bức  </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hệ thống khởi động :</b> Khởi động điện </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hộp số :</b> 6 cấp </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Công suất cực đại :</b>  45.0 kW {61 PS} / 7,500 rpm </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Mô-men xoắn cực đại : </b> 63.0 Nm {6.4 kg¦m} / 6,600 rpm </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dài / Rộng / Cao :</b>  2,310 / 880 / 1,100 mm</label>
+ 
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Chiều cao yên : </b> 705 mm.</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dung tích bình xăng : </b> 14 Lít</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: right;" >
+                                                    ---------------------------------------------------------
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <input type="button" value="Đặt mua" class="btn btn-primary btn-lg" >
+                                                    <a href="" data-toggle="modal" data-target="#starts1"><input type="button" value="Đánh Giá" class="btn btn-primary btn-lg" ></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                                     
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                
+                            </div>
+                        </div>
+                    </div> 
+                
+                <p style="color: white;">VULCAN S</p>
+                <p style="color: white;">Giá bán: 239.000.000 VNĐ</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="" data-toggle="modal" data-target="#md8"><img src="./YAMAHA V-iXION R 155 2019.jpg" alt=""></a>
+                
+                <div class="modal fade" id="md8" >
+                    <div class="modal-dialog modal-lg" modal=lg>
+                        <div class="modal-content" >
+                            <div class="modal-header" style="text-align: center;" >
+                                <h2 style="color: rgb(112, 116, 177);">THÔNG TIN XE</h2>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="container">
+                                    <div class="row"> 
+                                        <div class="col-sm-6">
+                                            <img src="./YAMAHA V-iXION R 155 2019.jpg" alt="" > 
+                                            <img src="./imgxe/xe8.jpg" alt=""  width="360" height="270">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h3><b>YAMAHA V-XIION R 155 2019</b></h3>
+                                            <form action="">
+                                                <div class="rowform-group" >
+                                                    <label for="col-sm-12"><b><h4>GIÁ: Liên hệ</b></h4> </label>
+                                                    
+                                                </div>
+                                              
+                                                <div class="rowform-group">
+                                                    <label for="col-sm-12"><b>THÔNG SỐ KỸ THUẬT</b> </label>
+                                                    
+                                                </div>
+                                                
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Loại động cơ :</b> 1 Xi lanh,SOHC, 4 Van, VVA</label>
+                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Dung tích :</b> 155,1 cc</label>
+                                                    
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Đường kính x Hành trình Piston :</b> 57 x 58,7 mm</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Tỉ số nén :</b>  11,6 ± 0,4: 1</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>hệ thống bôi trơn :</b> Bôi trơn cưỡng bức  </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hệ thống khởi động :</b> Khởi động điện </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hộp số :</b> 5 cấp </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Công suất cực đại :</b>  14,2 kW / 10000 rpm </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Mô-men xoắn cực đại : </b> 14,7 Nm / 8500 rpm </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dài / Rộng / Cao :</b>  1955 / 720 / 1,025mm</label>
+ 
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Chiều cao yên : </b> 795 mm.</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dung tích bình xăng : </b> 11 Lít</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: right;" >
+                                                    ---------------------------------------------------------
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <input type="button" value="Đặt mua" class="btn btn-primary btn-lg" >
+                                                    <a href="" data-toggle="modal" data-target="#starts1"><input type="button" value="Đánh Giá" class="btn btn-primary btn-lg" ></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                                     
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                
+                            </div>
+                        </div>
+                    </div> 
+                
+                <p style="color: white;">YAMAHA V-XIION R 155 2019</p>
+                <p style="color: white;">Giá bán: Liên Hệ</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="" data-toggle="modal" data-target="#md9"><img src="./YAMAHA YB125SP 2019.jpg" height="252px" width="320px" alt=""></a>
+                
+                <div class="modal fade" id="md9" >
+                    <div class="modal-dialog modal-lg" modal=lg>
+                        <div class="modal-content" >
+                            <div class="modal-header" style="text-align: center;" >
+                                <h2 style="color: rgb(112, 116, 177);">THÔNG TIN XE</h2>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="container">
+                                    <div class="row"> 
+                                        <div class="col-sm-6">
+                                            <img src="./YAMAHA YB125SP 2019.jpg" alt="" > 
+                                            <img src="./imgxe/xe9.jpg" alt="" width="360px" height="270px">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h3><b>YAMAHA YB125SP 2019</b></h3>
+                                            <form action="">
+                                                <div class="rowform-group" >
+                                                    <label for="col-sm-12"><b><h4>GIÁ: Liên hệ</b></h4> </label>
+                                                    
+                                                </div>
+                                              
+                                                <div class="rowform-group">
+                                                    <label for="col-sm-12"><b>THÔNG SỐ KỸ THUẬT</b> </label>
+                                                    
+                                                </div>
+                                                
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Loại động cơ :</b> 4 thì, 1 xi lanh , làm mát bằng gió</label>
+                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Dung tích :</b> 123,6 cc</label>
+                                                    
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Đường kính x Hành trình Piston :</b> ----</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Tỉ số nén :</b>  10:1</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>hệ thống bôi trơn :</b> Bôi trơn cưỡng bức  </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hệ thống khởi động :</b> Khởi động điện </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hộp số :</b> 5 cấp </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Công suất cực đại :</b>  9,52 PS / 7800 rpm </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Mô-men xoắn cực đại : </b> 9,9 Nm / 6000 rpm </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dài / Rộng / Cao :</b>  1970 / 760 / 1,080mm</label>
+ 
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Chiều cao yên : </b> 750 mm.</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dung tích bình xăng : </b> 10 Lít</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: right;" >
+                                                    ---------------------------------------------------------
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <input type="button" value="Đặt mua" class="btn btn-primary btn-lg" >
+                                                    <a href="" data-toggle="modal" data-target="#starts1"><input type="button" value="Đánh Giá" class="btn btn-primary btn-lg" ></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                                     
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                
+                            </div>
+                        </div>
+                    </div> 
+                
+                <p style="color: white;"> YAMAHA YB125SP 2019</p>
+                <p style="color: white;">Giá bán: Liên Hệ</p>
+                <p></p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="" data-toggle="modal" data-target="#md10"><img src="./Z650 ABS.jpg" height="251px" alt=""></a>
+                
+                <div class="modal fade" id="md10" >
+                    <div class="modal-dialog modal-lg" modal=lg>
+                        <div class="modal-content" >
+                            <div class="modal-header" style="text-align: center;" >
+                                <h2 style="color: rgb(112, 116, 177);">THÔNG TIN XE</h2>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="container">
+                                    <div class="row"> 
+                                        <div class="col-sm-6">
+                                            <img src="./Z650 ABS.jpg" alt="" > 
+                                            <img src="./imgxe/xe10.jpg" alt="" width="360px" height="270px">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h3><b>Z650 ABS</b></h3>
+                                            <form action="">
+                                                <div class="rowform-group" >
+                                                    <label for="col-sm-12"><b><h4>GIÁ: 187.000.000</b></h4> </label>
+                                                    
+                                                </div>
+                                              
+                                                <div class="rowform-group">
+                                                    <label for="col-sm-12"><b>THÔNG SỐ KỸ THUẬT</b> </label>
+                                                    
+                                                </div>
+                                                
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Loại động cơ :</b> 4 thì, xy-lanh đôi</label>
+                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Dung tích :</b> 649 cm3</label>
+                                                    
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Đường kính x Hành trình Piston :</b> 83,0 x 60,0 mm</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Tỉ số nén :</b> 10,8:1</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>hệ thống bôi trơn :</b> Bôi trơn cưỡng bức  </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hệ thống khởi động :</b> Khởi động điện </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hộp số :</b> 6 cấp </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Công suất cực đại :</b>  50,2 kW {68 PS} / 8.000 rpm </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Mô-men xoắn cực đại : </b> 64 N.m {6,5 kgf.m} / 6.700 rpm </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dài / Rộng / Cao :</b>  2,055 / 765 / 1,065 mm</label>
+ 
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Chiều cao yên : </b> 790 mm</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dung tích bình xăng : </b> 15 Lít</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: right;" >
+                                                    ---------------------------------------------------------
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <input type="button" value="Đặt mua" class="btn btn-primary btn-lg" >
+                                                    <a href="" data-toggle="modal" data-target="#starts1"><input type="button" value="Đánh Giá" class="btn btn-primary btn-lg" ></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                                     
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                
+                            </div>
+                        </div>
+                    </div> 
+                
+                <p style="color: white;"> Z650 ABS</p>
+                <p style="color: white;">Giá bán:187.000.000VNĐ</p>
+                <p></p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="" data-toggle="modal" data-target="#md11"><img src="./HONDA SH300I 2019.jpg" height="252px" alt=""></a>
+                
+                <div class="modal fade" id="md11" >
+                    <div class="modal-dialog modal-lg" modal=lg>
+                        <div class="modal-content" >
+                            <div class="modal-header" style="text-align: center;" >
+                                <h2 style="color: rgb(112, 116, 177);">THÔNG TIN XE</h2>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="container">
+                                    <div class="row"> 
+                                        <div class="col-sm-6">
+                                            <img src="./HONDA SH300I 2019.jpg" alt="" > 
+                                            <img src="./imgxe/xe11.jpg" alt="" width="360px" height="270px">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h3><b>HONDA SH300I 2019</b></h3>
+                                            <form action="">
+                                                <div class="rowform-group" >
+                                                    <label for="col-sm-12"><b><h4>GIÁ: Liên Hệ</b></h4> </label>
+                                                    
+                                                </div>
+                                              
+                                                <div class="rowform-group">
+                                                    <label for="col-sm-12"><b>THÔNG SỐ KỸ THUẬT</b> </label>
+                                                    
+                                                </div>
+                                                
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Loại động cơ :</b> 4 thì, xy-lanh đôi</label>
+                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Dung tích :</b> 279.1 cc</label>
+                                                    
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Đường kính x Hành trình Piston :</b>  68,6 mm</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Tỉ số nén :</b> 10,5:1</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>hệ thống bôi trơn :</b> Bôi trơn cưỡng bức  </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hệ thống khởi động :</b> Khởi động điện </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hộp số :</b> Honda V-Matic </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Công suất cực đại :</b>  50,2 kW {68 PS} / 8.000 rpm </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Mô-men xoắn cực đại : </b> 25,5Nm/5.000 vòng/phút </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dài / Rộng / Cao :</b>  2.131  x 730 x 1.195 mm</label>
+ 
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Chiều cao yên : </b> 803 mm</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dung tích bình xăng : </b> 9 Lít</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: right;" >
+                                                    ---------------------------------------------------------
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <input type="button" value="Đặt mua" class="btn btn-primary btn-lg" >
+                                                    <a href="" data-toggle="modal" data-target="#starts1"><input type="button" value="Đánh Giá" class="btn btn-primary btn-lg" ></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                                     
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                
+                            </div>
+                        </div>
+                    </div> 
+                
+                <p style="color: white;"> HONDA SH300I 2019</p>
+                <p style="color: white;">Giá bán:Liên Hệ</p>
+                <p></p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="" data-toggle="modal" data-target="#md12"><img src="./TRIUMPH BONNEVILLE T120 2019.jpg" width="320px" height="250px" alt=""></a>
+                
+                <div class="modal fade" id="md12" >
+                    <div class="modal-dialog modal-lg" modal=lg>
+                        <div class="modal-content" >
+                            <div class="modal-header" style="text-align: center;" >
+                                <h2 style="color: rgb(112, 116, 177);">THÔNG TIN XE</h2>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="container">
+                                    <div class="row"> 
+                                        <div class="col-sm-6">
+                                            <img src="./TRIUMPH BONNEVILLE T120 2019.jpg" alt="" > 
+                                            <img src="./imgxe/xe12.jpg" alt="" width="360px" height="270px">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h3><b>TRIUMPH BONNEVILLE T120 2019</b></h3>
+                                            <form action="">
+                                                <div class="rowform-group" >
+                                                    <label for="col-sm-12"><b><h4>GIÁ: Liên Hệ</b></h4> </label>
+                                                    
+                                                </div>
+                                              
+                                                <div class="rowform-group">
+                                                    <label for="col-sm-12"><b>THÔNG SỐ KỸ THUẬT</b> </label>
+                                                    
+                                                </div>
+                                                
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Loại động cơ :</b> 4 thì, xy-lanh đôi</label>
+                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;">
+                                                    <label for="col-sm-12"><b>Dung tích :</b> 649 cm3</label>
+                                                    
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Đường kính x Hành trình Piston :</b>  83,0 x 60,0 mm</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Tỉ số nén :</b> 10,8:1</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>hệ thống bôi trơn :</b> Bôi trơn cưỡng bức  </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hệ thống khởi động :</b> Khởi động điện </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Hộp số :</b> 6 cấp </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Công suất cực đại :</b>  79 HP tại 6550 vòng/phút </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Mô-men xoắn cực đại : </b> 105 Nm tại 3100 v/min </label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dài / Rộng / Cao :</b>  2.170  x 785 x 1.125 mm</label>
+ 
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Chiều cao yên : </b> 785 mm</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <label for="col-sm-12"><b>Dung tích bình xăng : </b> 14,5 Lít</label>
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: right;" >
+                                                    ---------------------------------------------------------
+                                                         
+                                                </div>
+                                                <br>
+                                                <div class="rowform-group" style="float: left;" >
+                                                    <input type="button" value="Đặt mua" class="btn btn-primary btn-lg" >
+                                                    <a href="" data-toggle="modal" data-target="#starts1"><input type="button" value="Đánh Giá" class="btn btn-primary btn-lg" ></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                                     
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                
+                            </div>
+                        </div>
+                    </div> 
+                
+                <p style="color: white;"> TRIUMPH BONNEVILLE T120 2019</p>
+                <p style="color: white;">Giá bán:Liên Hệ</p>
+                <p></p>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 text-center">
+                <a href="./Sanpham.html"><input type="button" placeholder="" class="btn btn-light" value="1"></a> 
+                <a href="./Sanpham2.html"><input type="button" placeholder="" class="btn btn-light" value="2"></a> 
+                <input type="button" placeholder="" class="btn btn-light" value=">>">
+            </div>
+            <div class="col-sm-4"></div>
+          </aside>
+        </section>
+            <footer style="padding-top: 2rem;">
+                <div class="col-sm-12 text-center">
+                    <h1 style="text-shadow:4px 2px 3px;padding-top: 1rem; font-style: italic;"><a href="./Trangchu.html" style="color: brown;">Jesseca&Tifanny motor <font color="black">®</font> </a></h1>
+                </div>
+                <div class="row col-sm-12">
+                    <div class="col-sm-4 text-center">
+                        <h6>LIÊN HỆ</h6>
+                        <p>&#9742; Hotline Hồ Chí Minh: 0912345678</p>
+                        <p>✆ Hotline Đại học Công Nghiệp: 0123456789</p>
+                        <p>✉ @Jesseca&Tifannymotor.com</p>
+                        <p> 💻 Website: <a href="./Trangchu.html">http://127.0.0.1:5500/Trangchu.html</a></p>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <h6>SHOWROOM</h6>
+                        <p>➡ Showroom 1:1/2/3/4/5/6,Jesseca,Phường Linda,Quận Cam,Hồ Chí Minh</p>
+                        <p>➡ Showroom 2: 181/2/67/9,Tifanny,Phường Peter,Quận Mery,Đại học Công Nghiệp</p>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <h6>VỀ Jesseca&Tifanny MOTOR®</h6>
+                        <p>Giới thiệu</p>
+                        <p>Liên hệ</p>
+                        <p>Quyền lợi& Lợi ích</p>
+                        <p>Điều khoản sử dụng</p>
+                        <p>Chính sách bảo mật</p>
+                    </div>
+                </div>
+                <div>Copyright © 2021 Powered by Jesseca&Tifanny Motor®</div>
+
+
+
+                <div class="modal fade" id="starts1" >
+                    <div class="modal-dialog modal-lg" modal=lg>
+                        <div class="modal-content" >
+                            <div class="modal-header" style="text-align: center;" >
+                                <h2 style="color: rgb(112, 116, 177);">Đánh giá</h2>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+ 					<div class="stars">
+ 						 <form action="">
+    							<input class="star star-5" id="star-5" type="radio" name="star"/>
+    							<label class="star star-5" for="star-5"></label>
+   							<input class="star star-4" id="star-4" type="radio" name="star"/>
+    							<label class="star star-4" for="star-4"></label>
+   						        <input class="star star-3" id="star-3" type="radio" name="star"/>
+    							<label class="star star-3" for="star-3"></label>
+  						        <input class="star star-2" id="star-2" type="radio" name="star"/>
+    							<label class="star star-2" for="star-2"></label>
+    							<input class="star star-1" id="star-1" type="radio" name="star"/>
+    							<label class="star star-1" for="star-1"></label>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Xác nhận</button>
+  						 </form>
+					</div>
+					
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+            </footer>
+</body>
+</html>
